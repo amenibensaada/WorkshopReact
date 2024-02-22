@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export default function Event(props) {
   const [event, setEvent] = useState(props.event);
@@ -30,7 +31,7 @@ export default function Event(props) {
           }
         />
         <Card.Body>
-          <Card.Title>{event.name}</Card.Title>
+          <Card.Title><Link to={`eventDetail/${event.name}`}>{event.name}</Link></Card.Title>
           <Card.Text>{event.description}</Card.Text>
           <p> price : {event.price}</p>
           <p> nombre Tickets : {event.nbTickets}</p>
