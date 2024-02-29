@@ -5,6 +5,7 @@ import NotFound from "./components/NotFound";
 import { Suspense } from "react";
 import Nav from "./components/NavBar";
 import EventDetails from "./components/EventDetails";
+import AddEvent from "./components/AddEvent";
 
 function App() {
   return (
@@ -14,9 +15,9 @@ function App() {
         <Routes>
           <Route path="/events">
             <Route index element={<Events />} />
-            <Route path="eventDetail/:nom" element={<EventDetails />} />
+            <Route path="eventDetail/:id" element={<EventDetails />} />
+            <Route path="add" element={<AddEvent />} />
             <Route path="*" element={<NotFound />} />
-
           </Route>
         </Routes>
       </Suspense>

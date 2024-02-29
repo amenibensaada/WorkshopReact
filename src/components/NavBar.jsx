@@ -18,6 +18,16 @@ export default function Nav() {
               Events
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              className="nav-link"
+              to="events/add"
+              style={({ isActive }) => ({
+                textDecoration: isActive ? "underline" : "none",
+              })}>
+              Add Event
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
