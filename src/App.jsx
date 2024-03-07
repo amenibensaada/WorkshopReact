@@ -14,7 +14,7 @@ function App() {
       <Suspense fallback={<p> Waiting server </p>}>
         <Routes>
           <Route path="/events">
-            <Route index element={<Events />} />
+            <Route index element={<Events />}  />
             <Route path="eventDetail/:id" element={<EventDetails />} />
             <Route path="add" element={<AddEvent />} />
             <Route path="*" element={<NotFound />} />
